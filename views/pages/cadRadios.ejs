@@ -28,7 +28,7 @@
                                                 </div>
                                                 <div class="form-group col-2">
                                                     <label>Serial</label>
-                                                    <input class="form-control form-control-sm" name="serial">
+                                                    <input class="form-control form-control-sm" name="serie">
                                                 </div>
                                                 <div class="form-group col-2">
                                                     <label>Marca Rádio</label>
@@ -57,7 +57,7 @@
                                                     <select class="form-select form-select-sm" name="mfonte">
                                                         <option></option>
                                                     <% marcafontes.forEach(marcafonte=>{ %>
-                                                        <option value="marcafonte.id_marcafonte">
+                                                        <option value="<%= marcafonte.id_mfonte %>">
                                                             <%= marcafonte.descricao %>
                                                         </option>
                                                     <% })%>
@@ -68,7 +68,7 @@
                                                     <select class="form-select form-select-sm" name="equipamento">
                                                         <option></option>
                                                         <% equipamentos.forEach(equipamento=>{ %>
-                                                            <option value="<= equipamento.id_equipamento >">
+                                                            <option value="<%= equipamento.id_equipamento %>">
                                                                 <%= equipamento.descricao %>
                                                             </option>
                                                         <% }) %>
@@ -76,18 +76,18 @@
                                                 </div>
                                                 <div class="form group col-2">
                                                     <label>Tipo Estação</label>
-                                                    <select class="form-select form-select-sm" name="estacoes">
+                                                    <select class="form-select form-select-sm" name="estacao">
                                                         <option></option>
                                                         <% estacoes.forEach(estacao=>{ %>
                                                             <option value="<%= estacao.id_estacao %>">
-                                                                <%= estacao.descricao%>
+                                                                <%= estacao.descricao %>
                                                             </option>
                                                         <% }) %>
                                                     </select>
                                                 </div>
                                                 <div class="form group col-2">
                                                     <label>Tipo Frequência</label>
-                                                    <select class="form-select form-select-sm" name="frequencias">
+                                                    <select class="form-select form-select-sm" name="frequencia">
                                                         <option></option>
                                                         <% frequencias.forEach(frequencia=>{ %>
                                                             <option value="<%= frequencia.id_frequencia %>">
@@ -123,11 +123,19 @@
                                                     <select class="form-select form-select-sm" name="ome">
                                                         <option></option>
                                                         <% omes.forEach(ome=>{ %>
-                                                            <option value="ome.id_organizacao">
+                                                            <option value="<%= ome.id_organizacao %>">
                                                                 <%= ome.sigla %>
                                                             </option>
                                                         <% }) %>
                                                     </select>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label>MOTIVO</label>
+                                                    <textarea class="form-inline form-control" name="motivo" placeholder="Descreva o motivo do rádio está fora de operação..."></textarea>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label>SEI - SIGEP</label>
+                                                    <textarea class="form-inline form-control" name="sei_sigep" placeholder="Informe número do Sei ou Sigepe"></textarea>
                                                 </div>
                                                 <div class="col-12">
                                                     <label>OBS</label>

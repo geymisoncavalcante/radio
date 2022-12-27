@@ -1,12 +1,141 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    EDITAR
-</body>
-</html>
+<%- include('../partials/head.ejs') %>
+
+    <body>
+
+        <body class="hold-transition sidebar-mini layout-fixed">
+            <div class="wrapper">
+                <%- include('../partials/aside.ejs')%>
+                    <!-- Content Wrapper. Contains page content -->
+                    <div class="content-wrapper">
+                        <!-- Content Header (Page header) -->
+                        <section class="content">
+                            <div class="container">
+                                <!-- Small boxes (Stat box) -->
+                                <div class="card">
+
+                                    <div class="card-header bg-info">
+                                        <h2>Edição de Rádios</h2>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <% IdRadios.forEach(IdRadio=>{ %>
+                                                    <label>TOMBAMENTO</label>
+                                                    <input class="form-control form-control-sm"
+                                                        value="<%= IdRadio.id_tombamento %>">
+                                            </div>
+                                            <div class="col-2">
+                                                <label>SERIAL</label>
+                                                <input class="form-control form-control-sm"
+                                                    value="<%= IdRadio.serie %>">
+                                            </div>
+                                            <div class="col-2">
+                                                <label>MARCA DE RÁDIO</label>
+                                                <select class="form-select form-select-sm">
+
+                                                    <option value="<%= IdRadio.id_mradio%>">
+                                                        <%= IdRadio.tmr_descricao%>
+                                                    </option>
+
+                                                </select>
+                                            </div>
+
+
+                                            <div class="col-2">
+                                                <label>MODELO DE RÁDIO</label>
+                                                <select class="form-select form-select-sm">
+
+                                                    <option value="<%= IdRadio.id_modeloradio %>">
+                                                        <%= IdRadio.tm_descricao %>
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="col-2">
+                                                <label>MARCAS DE FONTES</label>
+                                                <select class="form-select form-select-sm">
+
+                                                    <option value="<%= IdRadio.id_mfonte %>">
+                                                        <%= IdRadio.tmf_descricao %>
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="col-2">
+                                                <label>TIPO EQUIPAMENTO</label>
+                                                <select class="form-select form-select-sm">
+
+                                                    <option value="<%= IdRadio.id_equipamento %>">
+                                                        <%= IdRadio.te_descricao %>
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="col-2">
+                                                <label>TIPO DE ESTAÇÃO</label>
+                                                <select class="form-select form-select-sm">
+
+                                                    <option value="<%= IdRadio.id_estacao %>">
+                                                        <%= IdRadio.tes_descricao %>
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="col-2">
+                                                <label>TIPO DE FREQUÊNCIA</label>
+                                                <select class="form-select form-select-sm">
+
+                                                    <option value="<%= IdRadio.id_frequencia %>">
+                                                        <%= IdRadio.tf_descricao %>
+                                                    </option>
+                                                </select>
+                                            </div>
+
+                                            <% }) %>
+
+
+                                        </div>
+
+                                    </div>
+                                    <div class="card-footer bg-light">
+
+                                        <button class="btn btn-warning float-right">Limpar</button>
+                                        <button class="btn btn-success float-right">Salvar</button>
+
+                                    </div>
+
+                                    </select>
+
+                                </div>
+                            </div>
+                            <!-- /.card -->
+                        </section>
+                        <!-- right col -->
+                    </div>
+                    <!-- /.row (main row) -->
+            </div><!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+
+
+
+
+
+            </div>
+            <footer class="main-footer">
+                <%- include('../partials/footer.ejs')%>
+            </footer>
+
+
+        </body>
+
+
+
+        <!-- **************************************************************************************************** -->
+        <!-- <body>
+    <% IdRadios.forEach(IdRadio=>{ %>
+        TOMBAMENTO
+        <input class="form-control" value="<%= IdRadio.id_tombamento %>">
+        SERIAL
+        <input class="form-control" value="<%= IdRadio.serie %>">
+    <% }) %>
+
+</body> -->

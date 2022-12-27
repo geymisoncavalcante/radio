@@ -62,6 +62,7 @@
                                             <table class="table table-hover table-responsive" id="exemplo">
                                                 <thead>
                                                     <tr>
+                                                        <th>AÇÃO</th>
                                                         <th>TOMBAMENTO</th>
                                                         <th>MARCA RÁDIO</th>
                                                         <th>MODELO RÁDIO</th>
@@ -72,13 +73,21 @@
                                                         <th>TECNOLOGIA</th>
                                                         <th>STATUS</th>
                                                         <th>SERIAL</th>
-                                                        <th>AÇÃO</th>
+                                                        <th>OME</th>
+                                                       
                                                         
                                                     </tr>
                                                 </thead>  
                                                 <% radios.forEach(radio=> { %>
                                                     <tbody>
                                                         <tr>
+                                                            <td class="col-1">
+
+                                                                <a href="/radios/edit/<%= radio.id_tombamento %>" class="fa fa-edit text-blue"></a>
+                                                                <a href="#" class="fa fa-trash text-danger"></a>
+                                                                
+                                                                </td>
+
                                                             <td>
                                                                 <%= radio.id_tombamento %>
                                                             </td>
@@ -117,12 +126,11 @@
                                                                 <%= radio.serie %>
                                                             </td>
 
-                                                            <td class="col-1">
-
-                                                            <a href="#" class="fa fa-edit text-blue"></a>
-                                                            <a href="#" class="fa fa-trash text-danger"></a>
-                                                            
+                                                            <td>
+                                                                <%= radio.ome %>
                                                             </td>
+
+                                                           
                                                                 
                                                             
 
