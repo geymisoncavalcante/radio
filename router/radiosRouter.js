@@ -72,7 +72,7 @@ router.get('/deletRadios/:id', async function(req, res){
     }else{
       res.json(`${id} número deletado `);
     }
-  })
+  });
 
 });
 
