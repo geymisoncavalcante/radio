@@ -74,7 +74,7 @@ router.get('/deletRadios/:id', async function(req, res){
     }
   });
 
-});
+})
 
 router.get("/cadRadios", async function (req, res) {
   let mradios = await radiosController.getMradios();
